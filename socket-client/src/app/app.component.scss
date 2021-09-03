@@ -1,0 +1,88 @@
+.grid {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "form list"
+        "footer footer";
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    margin: 0;
+}
+
+.socket-header {
+    grid-area: header;
+    width: 100%;
+    height: 5vh;
+    background-color: #FF6347;
+    align-self: flex-start;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .header-text {
+        color: white;
+        font-weight: bold;
+        font-size: 2rem;
+        padding-left: 8px;
+    }
+}
+
+.socket-form {
+    grid-area: form;
+    place-self: center;
+    border: 1px solid silver;
+    padding: 1rem;
+    display: flex;
+    width: 80%;
+    height: 60%;
+    flex-direction: column;
+    box-sizing: border-box;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+
+
+    input, button, p {
+        width: 80%;
+        height: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+.socket-list {
+    grid-area: list;
+    place-self: center;
+    border: 1px solid silver;
+    padding: 1rem;
+    width: 80%;
+    height: 60%;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,50%);
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+
+.player-card {
+    place-self: center;
+    padding: 0.4rem;
+    margin: 0.4rem;
+    border: 1px solid silver;
+    width: 80%;
+}
+
+.player-card:nth-last-of-type(-n+2) {
+    margin-bottom: 11rem;
+}
+
+.socket-footer {
+    grid-area: footer;
+    width: 100%;
+    height: 3vh;
+    background-color: #FF6347;
+    align-self: flex-end;
+    justify-content: flex-end;
+    align-items: center;
+}
